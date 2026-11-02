@@ -1,0 +1,36 @@
+# Local data and credentials
+/data/
+/work/
+/outputs/
+/backups/
+**/results/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.key
+*.pem
+*.pfx
+*.p12
+*.log
+# Models are installed separately
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+# Local tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+*.lnk

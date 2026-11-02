@@ -1,0 +1,26 @@
+{
+  "company-local:latest": {
+    "total": 14,
+    "complete": 12,
+    "classification_total": 10,
+    "verdict_matches": 8,
+    "format_valid": 8,
+    "false_positive_count": 0,
+    "false_negative_count": 0,
+    "median_eval_tokens_per_second": 79.89595184267554,
+    "semantic_review": "pending",
+    "performance_note": "Mixed prompts, cold/warm loads, small sample; not a stable throughput benchmark."
+  },
+  "cybersec-base:latest": {
+    "total": 14,
+    "complete": 14,
+    "classification_total": 10,
+    "verdict_matches": 7,
+    "format_valid": 9,
+    "false_positive_count": 2,
+    "false_negative_count": 0,
+    "median_eval_tokens_per_second": 75.37432913307075,
+    "semantic_review": "pending",
+    "performance_note": "Mixed prompts, cold/warm loads, small sample; not a stable throughput benchmark."
+  }
+}

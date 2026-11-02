@@ -1,0 +1,10 @@
+test_free_port_serves (__main__.StartupTests) ... ok
+test_matching_process_reused (__main__.StartupTests) ... ok
+test_old_process_not_reused (__main__.StartupTests) ... ok
+test_unknown_service_not_reused (__main__.StartupTests) ... ok
+test_wrong_profile_not_reused (__main__.StartupTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.029s
+
+OK

@@ -1,0 +1,60 @@
+{
+  "provenance": "参考DS建议，由Codex纠正授权负例和URL编码歧义；候选提示词先冻结；本轮首次使用，非外部独立数据集。",
+  "license": "CC0-1.0 (synthetic examples only)",
+  "cases": [
+    {
+      "id": "jdbc-pos",
+      "group": "holdout",
+      "category": "SQLi",
+      "code": "String sql = \"SELECT * FROM users WHERE name='\" + req.getParameter(\"name\") + \"'\";\nStatement st = conn.createStatement();\nResultSet rs = st.executeQuery(sql);",
+      "prompt": "合成授权审计题，仅判断SQLi。前提：标准 JDBC，HTTP name 参数用户可控，无额外过滤或查询重写。\n代码：\nString sql = \"SELECT * FROM users WHERE name='\" + req.getParameter(\"name\") + \"'\";\nStatement st = conn.createStatement();\nResultSet rs = st.executeQuery(sql);\n请给出结论、代码证据、数据流理由与修复建议。",
+      "expected": "VULNERABLE",
+      "rubric": "输入拼接SQL；用PreparedStatement参数绑定"
+    },
+    {
+      "id": "jdbc-neg",
+      "group": "holdout",
+      "category": "SQLi",
+      "code": "PreparedStatement ps = conn.prepareStatement(\"SELECT id FROM users WHERE name = ?\");\nps.setString(1, req.getParameter(\"name\"));\nResultSet rs = ps.executeQuery();",
+      "prompt": "合成授权审计题，仅判断SQLi。前提：标准 JDBC 实现，SQL文本固定，无额外动态拼接；仅判断SQL注入。\n代码：\nPreparedStatement ps = conn.prepareStatement(\"SELECT id FROM users WHERE name = ?\");\nps.setString(1, req.getParameter(\"name\"));\nResultSet rs = ps.executeQuery();\n请给出结论、代码证据、数据流理由与修复建议。",
+      "expected": "NOT_VULNERABLE",
+      "rubric": "参数作为数据绑定，保持参数化"
+    },
+    {
+      "id": "message-dom-pos",
+      "group": "holdout",
+      "category": "DOM XSS",
+      "code": "window.addEventListener(\"message\", e => {\n  document.getElementById(\"out\").innerHTML = String(e.data);\n});",
+      "prompt": "合成授权审计题，仅判断DOM XSS。前提：标准浏览器，out为普通div；外部窗口可发送任意字符串消息，无CSP/TrustedTypes/净化；只判断DOM XSS。\n代码：\nwindow.addEventListener(\"message\", e => {\n  document.getElementById(\"out\").innerHTML = String(e.data);\n});\n请给出结论、代码证据、数据流理由与修复建议。",
+      "expected": "VULNERABLE",
+      "rubric": "message数据经HTML解析；应使用文本节点或相应上下文净化；勿称innerHTML插入script标签必执行"
+    },
+    {
+      "id": "message-dom-neg",
+      "group": "holdout",
+      "category": "DOM XSS",
+      "code": "window.addEventListener(\"message\", e => {\n  const t = document.createTextNode(String(e.data));\n  document.getElementById(\"out\").replaceChildren(t);\n});",
+      "prompt": "合成授权审计题，仅判断DOM XSS。前提：标准浏览器，out为普通div；外部可发送任意字符串，无后续将文字重新解释为HTML的代码；仅判断DOM XSS，不评价业务消息授权。\n代码：\nwindow.addEventListener(\"message\", e => {\n  const t = document.createTextNode(String(e.data));\n  document.getElementById(\"out\").replaceChildren(t);\n});\n请给出结论、代码证据、数据流理由与修复建议。",
+      "expected": "NOT_VULNERABLE",
+      "rubric": "创建文本节点并替换孩子，不解析HTML"
+    },
+    {
+      "id": "document-auth-pos",
+      "group": "holdout",
+      "category": "对象级越权",
+      "code": "def get_doc(doc_id, current_user):\n    if current_user is None:\n        return None\n    return db.get_doc(doc_id)",
+      "prompt": "合成授权审计题，仅判断对象级越权。前提：文档只允许所有者读取；current_user为可信已认证会话；doc_id用户可控；db.get_doc只按ID返回任意存在文档，含owner_id字段；没有额外授权。\n代码：\ndef get_doc(doc_id, current_user):\n    if current_user is None:\n        return None\n    return db.get_doc(doc_id)\n请给出结论、代码证据、数据流理由与修复建议。",
+      "expected": "VULNERABLE",
+      "rubric": "登录不等于资源授权，应比较doc.owner_id与current_user.user_id或用可信策略，不是doc_id比较user_id"
+    },
+    {
+      "id": "document-auth-neg",
+      "group": "holdout",
+      "category": "对象级越权",
+      "code": "def get_doc(doc_id, current_user):\n    if current_user is None:\n        return None\n    doc = db.get_doc(doc_id)\n    if doc is None:\n        return None\n    if doc.owner_id != current_user.user_id:\n        return None\n    return doc",
+      "prompt": "合成授权审计题，仅判断对象级越权。前提：文档只允许所有者读取，无共享或管理员例外；current_user与其user_id可信；db.get_doc只取文档而不做授权，doc.owner_id可信且不可被调用者篡改；没有其他返回路径。\n代码：\ndef get_doc(doc_id, current_user):\n    if current_user is None:\n        return None\n    doc = db.get_doc(doc_id)\n    if doc is None:\n        return None\n    if doc.owner_id != current_user.user_id:\n        return None\n    return doc\n请给出结论、代码证据、数据流理由与修复建议。",
+      "expected": "NOT_VULNERABLE",
+      "rubric": "访问前检查文档所属者与可信会话身份，符合明确业务规则"
+    }
+  ]
+}

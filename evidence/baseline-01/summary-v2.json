@@ -1,0 +1,44 @@
+{
+  "scorer_revision": 2,
+  "change": "Reject duplicate JSON keys; preserve v1 summary and raw outputs. No model rerun or output replacement.",
+  "models": {
+    "company-local:latest": {
+      "requests": 14,
+      "requests_complete": 12,
+      "classification_total": 10,
+      "classification_complete": 8,
+      "classification_truncated": 2,
+      "strict_format_valid": 8,
+      "usable_correct_verdicts": 8,
+      "wrong_verdicts": 0,
+      "false_positives": 0,
+      "negative_cases_complete": 3,
+      "median_eval_tokens_per_second": 79.89595184267554,
+      "median_first_content_seconds": 0.20948960003443062,
+      "length_limited_ids": [
+        "XSS-neg",
+        "Authorization-neg"
+      ],
+      "invalid_format_ids": []
+    },
+    "cybersec-base:latest": {
+      "requests": 14,
+      "requests_complete": 14,
+      "classification_total": 10,
+      "classification_complete": 10,
+      "classification_truncated": 0,
+      "strict_format_valid": 8,
+      "usable_correct_verdicts": 6,
+      "wrong_verdicts": 2,
+      "false_positives": 2,
+      "negative_cases_complete": 5,
+      "median_eval_tokens_per_second": 75.37432913307075,
+      "median_first_content_seconds": 0.19467315007932484,
+      "length_limited_ids": [],
+      "invalid_format_ids": [
+        "SQLi-pos",
+        "SSRF-pos"
+      ]
+    }
+  }
+}

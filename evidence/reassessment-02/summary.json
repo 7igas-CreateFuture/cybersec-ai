@@ -1,0 +1,58 @@
+{
+  "original": {
+    "regression": {
+      "requests": 14,
+      "complete": 14,
+      "classification_n": 10,
+      "format_valid": 8,
+      "usable_correct": 6,
+      "false_positive": 2,
+      "false_negative": 0,
+      "truncated": 0,
+      "median_tokens_per_second": 76.71399083546672,
+      "median_wall_seconds": 4.35410855000373,
+      "semantic_review": "pending"
+    },
+    "holdout": {
+      "requests": 6,
+      "complete": 6,
+      "classification_n": 6,
+      "format_valid": 6,
+      "usable_correct": 6,
+      "false_positive": 0,
+      "false_negative": 0,
+      "truncated": 0,
+      "median_tokens_per_second": 78.13608838209706,
+      "median_wall_seconds": 2.7038244500290602,
+      "semantic_review": "pending"
+    }
+  },
+  "candidate": {
+    "regression": {
+      "requests": 14,
+      "complete": 13,
+      "classification_n": 10,
+      "format_valid": 9,
+      "usable_correct": 8,
+      "false_positive": 0,
+      "false_negative": 1,
+      "truncated": 1,
+      "median_tokens_per_second": 76.55502317276664,
+      "median_wall_seconds": 2.409955200040713,
+      "semantic_review": "pending"
+    },
+    "holdout": {
+      "requests": 6,
+      "complete": 6,
+      "classification_n": 6,
+      "format_valid": 6,
+      "usable_correct": 6,
+      "false_positive": 0,
+      "false_negative": 0,
+      "truncated": 0,
+      "median_tokens_per_second": 78.17579922949147,
+      "median_wall_seconds": 2.1320807998999953,
+      "semantic_review": "pending"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "file": "evidence/baseline-01/cases.json",
+    "original_sha256": "6fd08b8007e4a419e2e806390e0c435043fe64370d5fe9c00c378df577dcabae",
+    "exported_sha256": "6fd08b8007e4a419e2e806390e0c435043fe64370d5fe9c00c378df577dcabae",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": null
+  },
+  {
+    "file": "evidence/baseline-01/metadata.json",
+    "original_sha256": "5e18b502e921d16b03ba77c24eea665995514859dcb7df800324dc1d5d46fef8",
+    "exported_sha256": "cf04255375621040ed864bde24de990818991aa9dd725072779b2c896784ad5a",
+    "redacted_local_paths": 2,
+    "raw_response_unchanged": null
+  },
+  {
+    "file": "evidence/baseline-01/responses.jsonl",
+    "original_sha256": "3a2dd517738e74d8b796c5c61b6ff72faeb84efb890ad0c73428045f07b347b7",
+    "exported_sha256": "3a2dd517738e74d8b796c5c61b6ff72faeb84efb890ad0c73428045f07b347b7",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": true
+  },
+  {
+    "file": "evidence/baseline-01/checks-v2.json",
+    "original_sha256": "c92d2fbfae2689f085cd1ed2e6ab3351d0402d8afb4d12bef3419f512d23033e",
+    "exported_sha256": "c92d2fbfae2689f085cd1ed2e6ab3351d0402d8afb4d12bef3419f512d23033e",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": null
+  },
+  {
+    "file": "evidence/baseline-01/summary.json",
+    "original_sha256": "ef93d386470fcc0776aa663cfd9cc70d39f37dd2cc4dda6eb1aa4c19d2ac36a2",
+    "exported_sha256": "ef93d386470fcc0776aa663cfd9cc70d39f37dd2cc4dda6eb1aa4c19d2ac36a2",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": null
+  },
+  {
+    "file": "evidence/baseline-01/summary-v2.json",
+    "original_sha256": "fc2deea2cb468b748d3f89fc27f78c167bf51458d493cbd398c8b713c331629f",
+    "exported_sha256": "fc2deea2cb468b748d3f89fc27f78c167bf51458d493cbd398c8b713c331629f",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": null
+  },
+  {
+    "file": "evidence/baseline-01/semantic-review.json",
+    "original_sha256": "f3f2dc4c7d994fb1657ecdc2c2e863274c2b33ff3fdbef91ef589ac95f7ce265",
+    "exported_sha256": "f3f2dc4c7d994fb1657ecdc2c2e863274c2b33ff3fdbef91ef589ac95f7ce265",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": null
+  },
+  {
+    "file": "evidence/baseline-01/semantic-review.md",
+    "original_sha256": "5e8816c75a934437ab26d307fb6ccda10377d9ffc174cb2c6e3c375692c0092a",
+    "exported_sha256": "5e8816c75a934437ab26d307fb6ccda10377d9ffc174cb2c6e3c375692c0092a",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": null
+  },
+  {
+    "file": "evidence/reassessment-02/cases.json",
+    "original_sha256": "78c8b40e18336aede9c2b9295ee6488efa2875f38509e715d2aa711649742da3",
+    "exported_sha256": "78c8b40e18336aede9c2b9295ee6488efa2875f38509e715d2aa711649742da3",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": null
+  },
+  {
+    "file": "evidence/reassessment-02/metadata.json",
+    "original_sha256": "86965fe61867b723898a1adf07ced43d91876f534fe8aea47524d3c4ec83637b",
+    "exported_sha256": "b0e210638f5799643a863685ab63992e944451a1abcec070d5f9f8a1df7de752",
+    "redacted_local_paths": 1,
+    "raw_response_unchanged": null
+  },
+  {
+    "file": "evidence/reassessment-02/responses.jsonl",
+    "original_sha256": "b339bec59a0b3acc880b6d79fae2e5db187f10b6788f64fe8079b65b31161592",
+    "exported_sha256": "b339bec59a0b3acc880b6d79fae2e5db187f10b6788f64fe8079b65b31161592",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": true
+  },
+  {
+    "file": "evidence/reassessment-02/summary.json",
+    "original_sha256": "f152a82741f69795afd39ed466a1e72f96528260592e890986360c739a4296fa",
+    "exported_sha256": "f152a82741f69795afd39ed466a1e72f96528260592e890986360c739a4296fa",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": null
+  },
+  {
+    "file": "evidence/reassessment-02/warmups.json",
+    "original_sha256": "b6ac4a170ced4d6862d4793afb463eb6392e358a933c952c78e03c6e4507c221",
+    "exported_sha256": "b6ac4a170ced4d6862d4793afb463eb6392e358a933c952c78e03c6e4507c221",
+    "redacted_local_paths": 0,
+    "raw_response_unchanged": null
+  }
+]

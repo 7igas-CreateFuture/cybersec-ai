@@ -1,0 +1,4 @@
+# Required for XLSX and PDF attachments; chat/text/DOCX use the standard library.
+# Versions observed in the accepted deployment, not a complete transitive lockfile.
+openpyxl==3.1.5
+pypdf==6.10.0

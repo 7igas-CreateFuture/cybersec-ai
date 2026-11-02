@@ -1,0 +1,12 @@
+{
+  "model": "cybersec-base:latest",
+  "source_model": "company-local:latest",
+  "system_file": "system.md",
+  "think": false,
+  "options": {
+    "num_ctx": 8192,
+    "num_predict": 1536,
+    "temperature": 0,
+    "seed": 42
+  }
+}

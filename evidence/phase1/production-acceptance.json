@@ -1,0 +1,59 @@
+{
+  "at": "2026-11-02T15:21:41.164866+08:00",
+  "checks": [
+    {
+      "name": "original_18765_current_profile_health",
+      "passed": true
+    },
+    {
+      "name": "original_ui_html_and_auth_token",
+      "passed": true
+    },
+    {
+      "name": "both_models_and_original_default",
+      "passed": true
+    },
+    {
+      "name": "unauthenticated_request_rejected",
+      "passed": true
+    },
+    {
+      "name": "company-local:latest_actual_stream_metrics_and_saved_history",
+      "passed": true
+    },
+    {
+      "name": "cybersec-base:latest_actual_stream_metrics_and_saved_history",
+      "passed": true
+    },
+    {
+      "name": "runtime_idle_after_tests",
+      "passed": true
+    },
+    {
+      "name": "all_original_history_rows_unchanged_two_acceptance_records_added",
+      "passed": true
+    },
+    {
+      "name": "original_company_model_metadata_unchanged",
+      "passed": true
+    }
+  ],
+  "history": {
+    "conversations": {
+      "before": 5,
+      "after": 7,
+      "existing_rows_unchanged": true
+    },
+    "turns": {
+      "before": 13,
+      "after": 15,
+      "existing_rows_unchanged": true
+    }
+  },
+  "model_names": [
+    "cybersec-base:latest",
+    "company-local:latest"
+  ],
+  "profile_version": 1,
+  "note": "Historical acceptance on the existing local deployment; not a clean-machine installation test of this checkout."
+}
