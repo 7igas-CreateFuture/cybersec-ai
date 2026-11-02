@@ -73,6 +73,7 @@ Python 入口支持 `LOCAL_AI_PORT` 和 `LOCAL_AI_HISTORY_DB` 覆盖；默认保
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s cybersec -p "test_*.py" -v
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_*.py" -v
 ```
 
 JDBC 案例只编译、不执行 Java；需要本机 JDK，没有则明确跳过。可用 `CYBERSEC_JAVAC` 指向已安装的 javac。完整功能检查会使用本机模型与 GPU：
@@ -83,6 +84,8 @@ JDBC 案例只编译、不执行 Java；需要本机 JDK，没有则明确跳过
 ```
 
 输出目录必须尚不存在。集成测试用 18766 和独立 SQLite，不改用户历史；会运行短生成与取消请求。基础评估为 14 条合成题 × 两模型，完整保存失败输出，不是大规模能力基准。
+
+若只检查本仓库是否能启动，可运行 `python tools/smoke_check.py --out cybersec/results/smoke-001`；同样使用 18766 和独立历史，但不调用模型。不要与集成测试同时执行。
 
 `cases-v2.json` 修订了 SSRF 前提，尚无对应模型成绩。`compare_prompts.py` 复现已冻结候选对照，候选没有部署。评估细节见 [配置与评估说明](cybersec/README.md) 和 [实验结果](docs/EVALUATION.md)。
 

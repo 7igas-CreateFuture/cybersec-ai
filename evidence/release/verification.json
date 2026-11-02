@@ -1,0 +1,20 @@
+{
+  "tested_source_commit": "e0bff49f5c0679f666105c1d5fa1e9c6c9db6c0b",
+  "release_directory": {
+    "unit_tests": 25,
+    "python_startup_tests": 5,
+    "isolated_http_tests": 8
+  },
+  "git_export": {
+    "unit_tests": 25,
+    "python_startup_tests": 5,
+    "startup_smoke": "passed",
+    "uses_existing_machine_dependencies": true,
+    "clean_machine_installation": false
+  },
+  "powershell_mock_tests": {
+    "status": "blocked",
+    "reason": "AuthorizationManager check failed; no execution policy changed"
+  },
+  "scope": "The final release adds only documentation and evidence to the tested source commit."
+}

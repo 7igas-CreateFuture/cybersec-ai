@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "fresh_process_version",
+    "html_token",
+    "js_asset",
+    "css_asset",
+    "empty_isolated_history"
+  ],
+  "model_calls": 0,
+  "real_history_used": false
+}
